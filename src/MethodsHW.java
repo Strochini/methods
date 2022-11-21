@@ -24,6 +24,20 @@ class MethodsHW {
             System.out.println("Установите облегченное приложение для Android по ссылке");
         }
     }
+    public static void countingDeliveryDays(int distance) {
+        if (distance <= 20) {
+            System.out.println("Потребуется дней: " + 1);
+        } else {
+            if (distance > 20 && distance <= 60) {
+                System.out.println("Потребуется дней: " + 2);
+            } else if (distance > 60 && distance <= 100) {
+                System.out.println("Потребуется дней: " + 3);
+
+            } else {
+                System.out.println("Доставка не возможна");
+            }
+        }
+    }
 
     public static void main(String[] args) {
 
@@ -38,5 +52,9 @@ class MethodsHW {
         int madeYear = 2012;
         calculatesAppVersion(clientOS, madeYear);
 
+        // Task 3
+
+        int deliveryDistance = 35;
+        countingDeliveryDays(deliveryDistance);
     }
 }
